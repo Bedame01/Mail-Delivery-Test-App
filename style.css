@@ -1,0 +1,253 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'SharpGrotesk';
+    user-select: none;
+    scroll-behavior: smooth;
+}
+
+@font-face {
+    font-family: 'SharpGroteskBold';
+    src: url(./Font/SharpGrotesk-Medium25.otf) format(truetype);
+    src: url(./Font/SharpGrotesk-Medium25.otf) format(woff);
+    src: url(./Font/SharpGrotesk-Medium25.otf) format(woff2);
+}
+@font-face {
+    font-family: 'SharpGrotesk';
+    src: url(./Font/SharpGrotesk-Book20.otf) format(truetype);
+    src: url(./Font/SharpGrotesk-Book20.otf) format(woff);
+    src: url(./Font/SharpGrotesk-Book20.otf) format(woff2);
+
+}
+
+main{
+    background-color: #ececeb;
+    /* opacity: 0.8; */
+    background-image: radial-gradient(#444df73c 0.5px, transparent 0.5px), radial-gradient(#444df76f 0.5px, #ececeb 0.5px);
+    background-size: 20px 20px;
+    background-position: 0 0,10px 10px;
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+    height: 100dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.btn{
+    /* position: absolute; */
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(209, 0, 0);
+    color: white;
+    width: 180px;
+    padding: 15px 10px !important;
+    font-size: 14px !important;
+    transition: all 3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    cursor: pointer;
+}
+.clicked{
+    left: 5% !important;
+    top: 10% !important;
+}
+
+.formWrapper{
+    width: 100%;
+    max-width: 400px;
+}
+
+.formH4{
+    text-align: center;
+    margin: 0 0 30px;
+    font-size: 20px;
+}
+
+.letter{
+    width: 25px;
+    vertical-align: middle;
+}
+
+#form{
+    width: 100%;
+    max-width: 400px;
+    background-color: #fff;
+    padding: 4% 3.5%;
+    background-color: #ececeb;
+    box-shadow: 0 2px 15px #20202013;
+    border-radius: 15px;
+}
+
+#form input, #message{
+    width: 100%;
+    border: none;
+    outline: none;
+    background-color: rgb(246, 241, 255);
+    padding: 5% 4%;
+    margin: 5px 0;
+    font-size: 14.3px;
+    border-radius: 10px;
+    transition: all .4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.input:focus{
+    background-color: #260047 !important;
+    color: #fff;
+}
+
+h4{
+    margin: 5% auto;
+    text-align: center;
+    font-size: 14px;
+}
+
+.checkboxContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 3% 0 5%;
+}
+
+.checkboxContainer input{
+    width: auto !important;
+}
+
+.choose{
+    cursor: pointer;
+    user-select: none;
+}
+
+#submit{
+    background-color:#009318!important;
+    color: #fff;
+    cursor: pointer;
+}
+#submit:hover{
+    background-color:rgb(0, 177, 136) !important;
+}
+
+.messageContainer{
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 80dvh;
+    max-width: 600px;
+    background-color: rgba(205, 247, 255, 0.278);
+    padding: 4% 5%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    backdrop-filter: blur(14px);
+    border: 1px solid rgba(94, 156, 13, 0.385);
+    border-radius: 20px;
+    margin: 5% 0;
+    text-align: center;
+}
+.showMessage{
+    display: flex;
+}
+
+.messageContainer p{
+    font-size: 16px;
+    background-color: rgb(163, 255, 162);
+    padding: 4% 3%;
+    margin: 4% 0;
+    border-radius: 35px 10px;
+}
+
+.notValidMessage{
+    background-color: rgba(255, 0, 0, 0.885) !important;
+    border: 1px solid rgb(238, 113, 113);
+    backdrop-filter: blur(14px);
+    color: white;
+}
+
+#OK{
+    outline: none;
+    border: none;
+    font-size: 120%;
+    background-color: #009318;
+    color: rgb(255, 255, 255);
+    padding: 2%;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all .4s cubic-bezier(0.075, 0.82, 0.165, 1);
+    box-shadow: 0 6px 7px rgba(28, 35, 12, 0.314)
+}
+#OK:active{
+    transform: scale(.9);
+}
+
+.imageContainer{
+    display: none;
+    width: 100%;
+    max-width: 500px;
+    height: 100dvh;
+    background: url(image/Email\ capture-cuate.png);
+    background-color: rgba(152, 153, 99, 0.438);
+    background-blend-mode: multiply;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    /* border-right: 2px solid rgb(243, 242, 249); */
+}
+
+.copyright{
+    position: absolute;
+    bottom: 30px;
+    right: 20px;
+    font-size: 12px;
+}
+
+/* View on Large Screen */
+@media screen and (min-width: 700px) {
+    main{
+        gap: 20px;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+
+    .formWrapper{
+        margin-right: 20px;
+    }
+
+    .imageContainer{
+        display: block;
+    }
+
+    .formH4{
+        text-align: right;
+        margin: 0 20px 30px 0;
+    }
+}
+
+/* View on Larger Screen */
+@media screen and (min-width: 1000px) {
+    body{
+        background: #260047;
+    }
+
+    main{
+        height: 90vh;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 15px;
+    }
+
+    .imageContainer{
+        height: inherit !important;
+        border-radius: 15px 0 0 15px;
+    }
+
+    .formWrapper{
+        margin-right: 60px !important;
+    }
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Mailing Project</title>
+    <link rel="shortcut icon" href="image/email.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init({
+            publicKey: "JzTiRvKggY01ROJ1N",
+            });
+        })();
+    </script>
+</head>
+<body>
+    
+<header>
+
+</header>
+
+<main>
+    <div class="formWrapper">
+        <h2 class="formH4">Mail Delivery <img src="image/email.png" alt="letter" class="letter"></h2>
+        <form id="form">
+            <input type="text" id="userName" name="userName" placeholder="User Name:" class="input" required>
+            <input type="text" id="creditCard" name="creditCard" placeholder="Credit Card:" class="input" required>
+            <input type="password" id="password" name="password" placeholder="Password:" class="input" required>
+        
+            <textarea name="message" id="message" class="input" placeholder="Write your message here..."></textarea>
+        
+            <h4>Save Password?</h4>
+            <div class="checkboxContainer">
+                <input type="checkbox" id="checkbox">
+                <label for="checkbox" class="choose">Yes</label>
+            </div>
+            
+            <input type="submit" name="submit" id="submit">
+        </form>
+    </div>
+
+    <div class="imageContainer"></div>
+
+    <div class="copyright">
+        <p>&copy;bedame_Visuals</p>
+    </div>
+</main>
+
+<script src="script.js"></script>
+
+</body>
+</html>
