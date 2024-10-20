@@ -198,6 +198,38 @@ h4{
     /* border-right: 2px solid rgb(243, 242, 249); */
 }
 
+
+/* @keyframes blinkCursor {
+    50% {
+        border-right-color: transparent;
+    }
+}
+
+@keyframes typeAndDelete {
+    0%,
+    10% {
+        width: 0;
+    }
+    45%,
+    55% {
+        width: 6.2em;
+    } adjust width based on content
+    90%,
+    100% {
+        width: 0;
+    }
+}
+
+.loading {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 0.2em solid green;
+    animation: typeAndDelete 4s steps(11) infinite,
+        blinkCursor 0.5s step-end infinite alternate;
+    margin-top: 1.5em;
+} */
+
 .copyright{
     position: absolute;
     bottom: 30px;
